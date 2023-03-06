@@ -12,6 +12,10 @@ if __name__ == "__main__":
     for file in glob('./test_case/*.txt'):
         inputs = loader(file)
         st = time.time()
-        ret = solution(*inputs)
+        ret = solution(*inputs[:-1])
         et = time.time()
-        print('sol :', ret, f'{(et-st)*1000:.4f} ms')
+        
+        print('|| test start', file, '||')
+        print('sol :', ret,f'== {inputs[-1]} ? ' f'{(et-st)*1000:.4f} ms')
+        print('|| test end', file, '||')
+        print('\n')
