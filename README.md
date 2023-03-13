@@ -1,4 +1,9 @@
 # coding-test (python)
+- example branch : 
+  ```
+  # test command
+  bash run.sh --split "|"
+  ```
 
 ## introduction
 
